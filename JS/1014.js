@@ -1,8 +1,8 @@
 var input = require('fs').readFileSync('./dev/stdin/file.txt', 'utf8');
 var lines = input.split('\n');
 
-let consumo = parseInt(lines.shift())
 let distancia = parseFloat(lines.shift())
-let km = (consumo / distancia)
+let combustivel = lines.shift()
+let consumo = (distancia / combustivel)
 
-console.log(km.toFixed(3), 'km/l')
+console.log(consumo.toFixed(3), 'km/l')
